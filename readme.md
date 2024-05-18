@@ -2,10 +2,29 @@
 
 ```
 #include <iostream>
+#include <string>
 #include <ctime>
 using namespace std;
-int guesschance=10;
-int main()
+void numG();
+void exitG();
+int main(){
+    
+    cout<<"number guessing game"<<endl;
+
+    int options;
+    cout<<"press '1' to play !!!"<<endl;
+    cout<<"press '2' for exit !!"<<endl;
+    cin >>options;
+    switch (options){
+        case 1: numG();
+        break;
+        case 2: exitG();
+        break;
+    }  
+}
+        
+
+void numG()
 {
     int number;
     int guess;
@@ -36,9 +55,12 @@ int main()
     }
 
     cout<<"Player 2 you made "<<guesschance<<" Attemps!"<<endl;
-
-    return 0;
-
 }
+    
+
+void exitG(){
+    cout<< "you have exited the game";
+}
+
 ```
 
